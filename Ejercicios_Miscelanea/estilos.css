@@ -1,118 +1,93 @@
-/* Estilos generales para el navbar */
 .navbar {
-    background-color: #b707ec; /* Un verde muy claro como fondo */
-    border-bottom: 2px solid #004d40; /* Un verde más oscuro para el borde */
+    border-bottom: 2px solid #f5a1c4; 
     padding: 3px 10px;
 }
 
-/* Estilo de los enlaces del navbar */
+
+h1{
+    text-align: center;
+    color: #f5a1c4;
+    }
+    
+
+
 .navbar .nav-link {
-    color: #0e0e0e; /* Un verde medio */
+    color: #f5a1c4; 
     transition: color 0.3s ease-in-out;
 }
 
-/* Cambio de color al pasar el mouse */
+
+
 .navbar .nav-link:hover,
 .navbar .nav-link:focus {
-    color: #004d40; /* Un verde más oscuro */
-    
+    color: #f71ab4; 
 }
 
-/* Estilo de los dropdown menus */
+
 .dropdown-menu {
-    background-color: #f1e2f3; /* Un verde muy claro */
-    border: 1px solid #004d40; /* Borde verde oscuro */
+    background-color: #facfe9; 
+    border: 1px solid #f5a1c4; 
 }
 
-/* Estilo de los items del dropdown */
+
 .dropdown-item {
-    color: #00796b; /* Un verde medio */
-    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    color: #080808; 
+    transition: 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
-/* Cambio de color al pasar el mouse sobre los items */
+
 .dropdown-item:hover,
 .dropdown-item:focus {
-    background-color: #004d40; /* Un verde oscuro para el fondo */
-    color: #ffffff; /* Texto en blanco */
-    
+    background-color: #f7a1db; 
+    color: #0e0d0d; 
 }
 
-/* Estilos generales para los botones */
+
 .btn-primary {
-    background-color: #02f8db; /* Un verde medio para el fondo */
-    border: none;
-    color: #ffffff; /* Texto en blanco */
-    transition: background-color 0.3s ease-in-out;
-}
-
-/* Cambio de color al pasar el mouse sobre los botones */
-.btn-primary:hover,
-.btn-primary:focus {
-    background-color: #000000; /* Un verde oscuro para el fondo */
+    background-color: #f793ca; 
+    border: none; 
+    transition:  0.3s ease-in-out;
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Estilos para los modales */
 .modal {
-    display: none; /* Mantiene el modal oculto hasta que se activa */
-    position: fixed; /* Fijo en la pantalla, no se mueve al hacer scroll */
-    z-index: 1050; /* Asegura que el modal esté por encima de otros elementos */
+    display: none; 
+    position: fixed; 
+    z-index: 1050; 
     left: 0;
     top: 0;
-    width: 100%; /* Ocupa todo el ancho */
-    height: 100%; /* Ocupa todo el alto */
-    overflow: auto; /* Permite hacer scroll dentro del modal si el contenido es muy largo */
-    background-color: rgba(0,0,0,0.4); /* Fondo semitransparente para dar efecto de oscuridad */
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0, 0, 0, 0.158); 
 }
 
-/* Para centrar el contenido del modal y hacerlo más compacto */
+
 .modal-content {
-    background-color: #e6a8db; /* Fondo claro con tono verde */
-    margin: 15% auto; /* Centra el modal verticalmente y horizontalmente */
+    background-color: #e71dc2; 
+    margin: 15% auto; 
     padding: 20px;
-    border: 1px solid #e22272; /* Borde sutil */
-    width: 80%; /* Ancho relativo al contenedor padre, ajustable según necesidad */
-    max-width: 500px; /* Máximo ancho que puede tener */
-    border-radius: 5px; /* Bordes redondeados para un look más suave */
+    border: 1px solid #f5a1c4; 
+    width: 80%; 
+    max-width: 500px; 
+    border-radius: 5px; 
 }
+
 
 .modal-contenido {
-    background-color: #f3dfe9; /* Fondo blanco para un look limpio y profesional */
-    border: 1px solid #ad3184; /* Un borde sutil para definir el contorno */
-    border-radius: 5px; /* Bordes redondeados suaves */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera para añadir profundidad */
-    padding: 20px; /* Espacio interior para no saturar el contenido */
-    width: auto; /* Ancho automático basado en el contenido */
-    max-width: 500px; /* Un máximo ancho para asegurar que luzca bien en pantallas grandes */
-    margin: auto; /* Margen automático para centrar vertical y horizontalmente */
+    background-color: #fdc9e3;
+    border: 1px solid #e2a7cf; 
+    border-radius: 5px; 
+    padding: 20px; 
+    width: auto; 
+    max-width: 500px; 
+    margin: auto; 
     margin-top: 300px;
-    display: flex; /* Utiliza flexbox para organizar el contenido */
-    flex-direction: column; /* Orienta los hijos del modal verticalmente */
-    justify-content: start; /* Alinea el contenido desde el principio */
-    align-items: center; /* Centra los elementos hijos horizontalmente */
-    overflow: hidden; /* Esconde el contenido que se desborde del tamaño del modal */
+    display: flex; 
+    flex-direction: column; 
+    justify-content: start; 
+    align-items: center; 
+    overflow: hidden; 
 }
 
 
@@ -125,12 +100,9 @@
 
 .cerrar:hover,
 .cerrar:focus {
-    color: #e23cbe;
+    color: #e6b;
     text-decoration: none;
     cursor: pointer;
 }
 
 
-h1{
-text-align: center;
-}

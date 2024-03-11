@@ -11,8 +11,8 @@
 <header >
     
 </header>
-<img src="https://w7.pngwing.com/pngs/185/683/png-transparent-united-way-worldwide-charitable-organization-fundraising-logo-unity-leaf-donation-logo.png" height="120" alt="120" healt="">
-<h1>Miscelanea - Ejercicios</h1>
+<img src="https://e7.pngegg.com/pngimages/166/213/png-clipart-roses-logo-flower.png" height="140"  alt="Imagen transparente" style="opacity: 0.5;">
+<h1>Miscelanea</h1>
 
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -40,7 +40,6 @@
                         </div>
                     </div>
                </li>
-              <br>
                 <div>
                 <li> 
                     <button class="dropdown-item" id="openModalSuma">Sumar Números</button>
@@ -65,7 +64,6 @@
                     </div>
                 </div>
               </li>
-              <br>
               <div>
                 <li>
                 <button class="dropdown-item" id="openModalElevado">Numero elevado al cuadrado</button>
@@ -84,7 +82,6 @@
                 </div>
               </div>
             </li> 
-            <br>
             <li>
                 <button class="dropdown-item" id="openModalConversion">Conversion euros a dolares</button>
                 <div id="modalConversion" class="modal">
@@ -101,7 +98,6 @@
                     </div>
                 </div>                
                 </li>
-                <br>
             <li>
                 <button class="dropdown-item" id="openModalCilindro">Área y volumen de un cilindro</button>
                 <div id="modalCilindro" class="modal">
@@ -121,7 +117,6 @@
                    </div>
                </div>
                 </li>
-                <br>
                 <li>
                     <button class="dropdown-item" id="openModalCuadrado">Área y perímetro de cuadrado</button>
                     <div id="modalCuadrado" class="modal">
@@ -137,8 +132,7 @@
                             </div>
                         </div>
                     </div>
-                </li>  
-                <br>  
+                </li>   
                 <li>
                     <button class="dropdown-item" id="openModalCircunferencia">Área y longitud de circunferencia</button>
                     <div id="modalCircunferencia" class="modal">
@@ -155,7 +149,6 @@
                         </div>
                     </div>
                 </li>
-                <br>
                 <li>
                     <button class="dropdown-item" id="openModalPromedio">Promedio de numeros</button>
                     <div id="modalPromedio" class="modal">
@@ -184,8 +177,8 @@
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li>
-                    <button id="openModalVerificacin">Verificacion positivo negativo</button>
-                    <div id="modalNumero" class="modal">
+                    <button class="dropdown-item" id="openModalVerificacion">Verificacion positivo negativo</button>
+                    <div id="modalVerificacion" class="modal">
                         <div class="modal-contenido">
                             <span class="cerrar">&times;</span>
                             <h2>Ingresa un numero</h2>
@@ -197,11 +190,64 @@
                                 <h2>Resultado: <span id="resultadoVerificacionTexto"></span></h2>
                             </div>
                         </div>
+                    </div>    
+                </li>
+                <li>
+                    <button class="dropdown-item" id="openModalMayorMenor">Numero mayor menor</button>
+                    <div id="modalMayorMenor" class="modal">
+                        <div class="modal-contenido">
+                            <span class="cerrar">&times;</span>
+                            <h2>Ingresa Numeros</h2>
+                            <label for="ingresaNumero1">Ingresa numero 1</label>
+                            <input type="number" id="ingresaNumero1" required>
+                            <label for="ingresaNumero2">Ingresa numero 2</label>
+                            <input type="number" id="ingresaNumero2" required>
+                            <br>
+                            <button onclick="numeroMayorMenor()">Numero mayor menor</button>
+                            <div id="resultadoMayorMenor">
+                                <h2>Resultado: <span id="resultadoMayorMenorTexto"></span></h2>
+                            </div>
+                        </div>
                     </div>
                 </li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                <li>
+                    <button class="dropdown-item" id="openModalMayorMenor3Num">Mayor menor de tres numeros</button>
+                    <div id="modalMayorMenor3Num" class="modal">
+                        <div class="modal-contenido">
+                            <span class="cerrar">&times;</span>
+                            <h2>Ingresa tres números</h2>
+                            <label for="numero1">Número 1</label>
+                            <input type="number" id="numero1" required>
+                            <label for="numero2">Número 2</label>
+                            <input type="number" id="numero2" required>
+                            <label for="numero3">Número 3</label>
+                            <input type="number" id="numero3" required>
+                            <br>
+                            <button onclick="mayorMenor3Numeros()">Mayor menor de tres numeros</button>
+                            <div id="resultadoMayorMenor3Num">
+                                <h2>Resultado: <span id="resultadoMayorMenor3NumTexto"></span></h2>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <button class="dropdown-item" id="openModalSumaResta2Num">Suma resta de dos numeros</button>
+                    <div id="modalSumaResta2Num" class="modal">
+                        <div class="modal-contenido">
+                            <span class="cerrar">&times;</span>
+                            <h2>Ingresa dos numeros</h2>
+                            <label for="numeroA">Numero A</label>
+                            <input type="number" id="numeroA" required>
+                            <label for="numeroB">Numero B</label>
+                            <input type="number" id="numeroB" required>
+                            <br>
+                            <button onclick="sumaResta2Numeros()">Suma resta de dos numeros</button>
+                            <div id="resultadoSumaResta2Num">
+                                <h2>Resultado:<span id="resultadoSumaResta2NumTexto"></span></h2>
+                            </div>
+                        </div>
+                    </div>
+                </li>
             </ul>
         </li>
         <li class="nav-item dropdown">

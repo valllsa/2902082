@@ -189,16 +189,100 @@ function calcularPromedio() {
     });
   }
   function verificarPositivoNegativo() {
-    var num = parseFloat(prompt("Ingrese un número: "));
+    var num = parseFloat(document.getElementById("ingresaTuNumero").value);
     if (num > 0) {
-      alert("El número es positivo");
+        document.getElementById("resultadoVerificacionTexto").textContent = "El número es positivo";
     } else if (num < 0) {
-      alert("El número es negativo");
+        document.getElementById("resultadoVerificacionTexto").textContent = "El número es negativo";
     } else {
-      alert("El número es cero");
+        document.getElementById("resultadoVerificacionTexto").textContent = "El número es cero";
     }
+}
+
+
+//NUMERO MAYOR O MENOR 
+document.getElementById('openModalMayorMenor').addEventListener('click', function() {
+  document.getElementById('modalMayorMenor').style.display = 'block';
+});
+
+  var cerrarButtons = document.getElementsByClassName('cerrar');
+  for (let i = 0; i < cerrarButtons.length; i++) {
+    cerrarButtons[i].addEventListener('click', function () {
+        this.parentElement.parentElement.style.display = 'none';
+  });
+ }
+ function numeroMayorMenor() {
+  var num1 = parseFloat(document.getElementById("ingresaNumero1").value);
+  var num2 = parseFloat(document.getElementById("ingresaNumero2").value);
+
+  if (isNaN(num1) || isNaN(num2)) {
+      document.getElementById("resultadoMayorMenorTexto").textContent = "Por favor ingresa dos números válidos.";
+  } else if (num1 === num2) {
+      document.getElementById("resultadoMayorMenorTexto").textContent = "Los dos números son iguales.";
+  } else if (num1 > num2) {
+      document.getElementById("resultadoMayorMenorTexto").textContent = "El primer número es mayor que el segundo.";
+  } else if (num1 < num2) {
+      document.getElementById("resultadoMayorMenorTexto").textContent = "El segundo número es mayor que el primero.";
+  }
+}
+
+
+//MAYOR Y MENOR ENTRE 3 NUMEROS
+
+document.getElementById('openModalMayorMenor3Num').addEventListener('click', function() {
+  document.getElementById('modalMayorMenor3Num').style.display = 'block';
+});
+
+var cerrarButtons = document.getElementsByClassName('cerrar');
+for (let i = 0; i < cerrarButtons.length; i++) {
+  cerrarButtons[i].addEventListener('click', function() {
+      this.parentElement.parentElement.style.display = 'none';
+  });
+}
+
+function mayorMenor3Numeros() {
+  var num1 = parseFloat(document.getElementById("numero1").value);
+  var num2 = parseFloat(document.getElementById("numero2").value);
+  var num3 = parseFloat(document.getElementById("numero3").value);
+
+  if (isNaN(num1) || isNaN(num2) || isNaN(num3)) {
+      document.getElementById("resultadoMayorMenor3NumTexto").textContent = "Por favor ingrese tres números válidos.";
+  } else {
+      var mayor = Math.max(num1, num2, num3);
+      var menor = Math.min(num1, num2, num3);
+      document.getElementById("resultadoMayorMenor3NumTexto").textContent = "El mayor de los tres números es: " + mayor + ", y el menor es: " + menor + ".";
+  }
+}
+
+
+//SUMA O RESTA DE NUMEROS
+
+document.getElementById('openModalSumaResta2Num').addEventListener('click', function() {
+  document.getElementById('modalSumaResta2Num').style.display = 'block';
+});
+var cerrarButtons = document.getElementsByClassName('cerrar');
+for (let i = 0; i< cerrarButtons.length; i++) {
+  cerrarButtons[i].addEventListener('click', function() {
+    this.parentElement.parentElement.style.display = 'none';
+  });
+}
+
+function sumaResta2Numeros() {
+  var num1 = parseInt(document.getElementById('numeroA').value);
+  var num2 = parseInt(document.getElementById('numeroB').value);
+  var resultadoElemento = document.getElementById('resultadoSumaResta2NumTexto');
+
+  var calculo;
+  if (num1 < num2) {
+    calculo = num1 + num2;
+  } else {
+    calculo = num1 - num2;
+  }
+  resultadoElemento.innerText = "El resultado es: " + calculo;
   }
 
+ 
+ 
 
 
 
